@@ -49,3 +49,5 @@ for x in food_order:
 # print(menu[0])
 # before I print I need to make them all capitalized
 # print everything
+for x in menu:
+    print(x.upper())
