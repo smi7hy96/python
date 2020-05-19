@@ -59,6 +59,10 @@ for x in food_order:
         if int(x) == (i+1):
             # if matched - print out the menu item
            print(menu[i])
+        elif int(x) > len(menu):
+            print("Item entered didn't exist - so you get nothing!")
+            break
+
 
 # I need to print each item from the list
 # print(menu[0])
