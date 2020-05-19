@@ -26,21 +26,26 @@ print("Here is today's Menu!!")
 for (x, item) in enumerate(menu, start=1):
     print(x, item)
 time.sleep(2)
-
 # USER STORY 2
 print("What would you like to order today? Use the numbers in the list to pick an item!")
 item_1 = input("What will be the first item? \n")
 food_order.append(item_1)
 time.sleep(1)
-item_2 = input("And the second?")
+item_2 = input("And the second? \n")
 food_order.append(item_2)
 time.sleep(1)
-item_3 = input("And the final item?")
+item_3 = input("And the final item? \n")
 food_order.append(item_3)
 
-
+# USER STORY 3
+print("Your order is IN! Confirming...")
+time.sleep(2)
+for x in food_order:
+    for i in range(len(menu)):
+        if int(x) == (i+1):
+           print(menu[i])
 
 # I need to print each item from the list
 # print(menu[0])
 # before I print I need to make them all capitalized
-#  print everything
+# print everything
