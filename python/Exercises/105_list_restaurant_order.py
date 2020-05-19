@@ -21,15 +21,23 @@ import time
 # starter code
 # USER STORY 1
 menu = ['Pizza', 'Burger', 'Enchiladas', 'Quesadillas', 'Just Cake :-)']
-
-print("Here is today's Menu!!")
-for x in menu:
-    print(x)
-time.sleep(2)
-print("What would you like to order today?")
-
-
 food_order = []
+print("Here is today's Menu!!")
+for (x, item) in enumerate(menu, start=1):
+    print(x, item)
+time.sleep(2)
+
+# USER STORY 2
+print("What would you like to order today? Use the numbers in the list to pick an item!")
+item_1 = input("What will be the first item? \n")
+food_order.append(item_1)
+time.sleep(1)
+item_2 = input("And the second?")
+food_order.append(item_2)
+time.sleep(1)
+item_3 = input("And the final item?")
+food_order.append(item_3)
+
 
 
 # I need to print each item from the list
