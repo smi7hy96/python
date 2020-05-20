@@ -25,6 +25,7 @@ while not kill_code:  # while kill code is false always repeat following code
             print("FINALLY")
             time.sleep(1.25)
             # SEGMENT 2 -- loops through a set number of times depending on number entered by user
+            failure_count = 0
         for x in range(int(user_number)):
             y = x + 1
             if y % 3 == 0 and y % 5 == 0:  # if divisible by both 3 and 5, print fizzbuzz
