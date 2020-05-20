@@ -2,8 +2,17 @@ import random
 eng_57 = ['Nathan', 'Saskia', 'Samir', 'Ryan', 'Patrick', 'Marcus', 'Jonathan', 'Avraj', 'Ashraf', 'Delvin', 'Fahad',
           'Hussain', 'Mergim', 'Stefan']
 
-
-max_group_size = int(input("Enter Max Group Size \n"))
+pos_num = False
+while not pos_num:
+    max_group_size = input("Enter Max Group Size \n")
+    if max_group_size.isnumeric():
+        max_group_size = int(max_group_size)
+        if max_group_size > 0:
+            pos_num = True
+        else:
+            print("Sorry, number entered is less than 1")
+    else:
+        print("You didn't enter a number")
 
 rand_num = random.randint(0, len(eng_57)-1)
 range_num = -(len(eng_57) // -max_group_size)
