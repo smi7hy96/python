@@ -1,14 +1,15 @@
 import time
+
 # SIMPLEST - Restaurant Waiter Helper
 
 # User Stories
-#1
+# 1
 # AS a User I want to be able to see the menu in a formated way, so that I can order my meal.
 
-#2
+# 2
 # AS a User I want to be able to order 3 times, and have my responses added to a list so they aren't forgotten
 
-#3
+# 3
 # As a user, I want to have my order read back to me in formated way so I know what I ordered.
 
 # DOD
@@ -29,26 +30,26 @@ print("Here is today's Menu!!")
 for (x, item) in enumerate(menu, start=1):
     print(x, item)
 
-time.sleep(2)  # Delay for two seconds
+time.sleep(1)  # Delay for two seconds
 # USER STORY 2
 
 print("What would you like to order today? Use the numbers in the list to pick an item!")
 # Get user to enter number of item (using list) that they wish to order
 item_1 = input("What will be the first item? \n")
 food_order.append(item_1)  # add number to food order list
-time.sleep(1)  # delay 1 second
+time.sleep(0.5)  # delay 1 second
 
 # repeat for second and third item of the customers order
 item_2 = input("And the second? \n")
 food_order.append(item_2)
-time.sleep(1)
+time.sleep(0.5)
 item_3 = input("And the final item? \n")
 food_order.append(item_3)
 
 # USER STORY 3
 # Tell user that their order is confirmed
-print("Your order is IN! Confirming...")
-time.sleep(2)
+print("Your order is IN! Confirming... \n")
+time.sleep(1.5)
 
 # Loop through the food order list (3 times)
 for x in food_order:
@@ -56,17 +57,19 @@ for x in food_order:
     # (to be able to get the positions of items in the menu)
     for i in range(len(menu)):
         # Check if number entered is matched with a position in the menu array
-        if int(x) == (i+1):
+        if int(x) == (i + 1):
             # if matched - print out the menu item
-           print(menu[i])
+            print(menu[i])
+            time.sleep(0.25)
         elif int(x) > len(menu):
             print("Item entered didn't exist - so you get nothing!")
             break
 
-
+time.sleep(1)
+print("\nENJOY!!! Where's my tip?!?")
 # I need to print each item from the list
 # print(menu[0])
 # before I print I need to make them all capitalized
 # print everything
-for x in menu:
-    print(x.upper()) # convert menu items to upper case
+# for x in menu:
+#     print(x.upper()) # convert menu items to upper case
