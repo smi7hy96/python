@@ -1,5 +1,7 @@
 # Basis of a Test
 
+# Tests would normally be in a different file and separate from the actual application.
+
 # Example function
 
 def correct_name(name):
