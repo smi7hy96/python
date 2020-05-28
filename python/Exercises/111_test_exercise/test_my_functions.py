@@ -5,7 +5,7 @@ from my_functions import *
 print("Testing function say_hello() with '  RyaN    ' --> 'Ryan'")
 test_input = '  RyaN    '
 expec_out = 'Hello Ryan'
-print(say_hello(test_input) == expec_out)
+print(say_hello(test_input) == expec_out)  # PRINT OUT TRUE IF INPUT MATCHES OUTPUT (function working) OR FALSE IF NOT
 # Test with Number
 print("Testing function say_hello() with '50' --> 'Error'")
 test_input = '50'
