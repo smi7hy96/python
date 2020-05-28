@@ -42,6 +42,10 @@ class Game:
                 bzu_list.append(y)  # if none of those, just add the number
         return bzu_list  # return the list
 
+    def set_cond(self, cond_1, cond_2):
+        self.cond_1 = cond_1  # set boundary 1
+        self.cond_2 = cond_2  # set boundary 2
+
     def play(self):  # initial function that sets most of the attributes of the object
         correct_input = False
         while not correct_input:  # while loop to keep repeating until valid input has been entered
@@ -50,11 +54,8 @@ class Game:
                 self.limit = user_number  # if true, set number as limit in attribute
                 correct_input = True  # return true, break while loop
                 if self.type == 1:  # checking type (set in another method) there are only 3 types (1,2 or 3)
-                    self.cond_1 = 3  # set boundary 1
-                    self.cond_2 = 5  # set boundary 2
+                    self.set_cond(3, 5)
                 elif self.type == 2:  # same again but with different fixed numbers this time
-                    self.cond_1 = 4
-                    self.cond_2 = 9
+                    self.set_cond(4, 9)
                 else:  # if neither, then the game type has custom boundaries.
-                    self.cond_1 = self.get_params()  # use get_params function to set attribute with custom number
-                    self.cond_2 = self.get_params()  # same as above but with the other boundary attribute
+                    self.set_cond(self.get_params(), self.get_params())
